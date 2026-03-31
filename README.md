@@ -1,63 +1,41 @@
-# WapKing PHP Songs Download PHP Script by SKYRHRG
+# ARIA (Adaptive Real-time Intelligent Assistant)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PHP](https://img.shields.io/badge/PHP-%3E=7.2-8892BF.svg)](https://www.php.net/)
+Android Native starter project for **Phase 1** of ARIA.
 
-A powerful PHP script for creating a WapKing-style website dedicated to downloading PHP songs. Built with security, performance, and ease of management in mind. Developed by SKYRHRG Technologies Systems.
+## What is included
 
-## Features
+- Kotlin + Jetpack Compose app skeleton
+- Chat UI (dark gradient theme)
+- Settings panel for API keys and model configuration
+- Local settings persistence using DataStore
+- Basic speech-to-text input via Android `RecognizerIntent`
+- OpenAI chat integration (`/v1/chat/completions`) with `gpt-4o-mini` default
 
-This script comes packed with a wide range of features to help you build and manage a successful music download website:
+## Open in Android Studio
 
-* 🛡️ **100% Safe From Hacking:** Robust security measures implemented to protect your website and user data.
-* ⬇️ **Dynamic Downloading Page:** User-friendly download pages that enhance the user experience.
-* 🔗 **Link Uploading System:** Easily manage and upload download links for your songs.
-* 🏷️ **Auto MP3 Tags Guaranteed:** Automatically fetches and applies relevant MP3 tags to ensure proper song information.
-* 🖼️ **All Page Thumb Share:** Enables easy sharing of thumbnails for all pages across social media.
-* 💧 **Watermark On All Thumbnails:** Customizable watermarks on thumbnails (e.g., Category, Singer, Song) for branding.
-* ▶️ **MP3 Play Without Download:** Integrated audio player allows users to stream songs before downloading.
-* ⚙️ **New Functions in Admin Panel:** Enhanced administrative tools for better control and management of the website.
-* 🔒 **100% SSL Work (Free and Paid):** Fully compatible with both free and paid SSL certificates for secure connections.
-* 👤 **Multiple Admin Management:** Allows for the creation and management of multiple administrator accounts with varying permissions.
-* 🎤 **Singer Thumb Show In Singer List:** Displays thumbnails for singers in the singer list for better visual appeal.
-* 🔄 **Automatic Latest Updates With Thumbnail:** Automatically displays the latest song updates with accompanying thumbnails.
-* ⭐ **Featured Songs:** Option to highlight and showcase featured songs on your website.
-* 🎤 **Featured Singers:** Option to highlight and showcase featured singers on your website.
-* 🗺️ **Auto Sitemap Generator:** Automatically generates a sitemap to improve search engine crawling and indexing.
-* 🎼 **Bitrate Converter (64kbps, 128kbps, 192kbps, 320kbps):** Built-in tool to convert audio files to various bitrates.
-* 🚀 **Full SEO Included & Fast Rank Google:** Optimized for search engines to ensure fast indexing and high rankings on Google.
-* 📢 **Any Type Ads Code Working:** Flexible ad integration allowing you to use various types of advertisement codes.
-* 🧭 **Dynamic Navigation:** Automatically updating and user-friendly navigation menu.
-* ⚡ **99.99% Fast Page Uploading Time:** Optimized for speed to provide a seamless and fast browsing experience for users.
+1. Open Android Studio (Hedgehog+ recommended).
+2. Choose **Open** and select this project root.
+3. Let Android Studio install SDKs/build tools if prompted.
+4. Sync Gradle.
+5. Run the `app` module on Android 10+ emulator/device.
 
-## Installation
+## Immediate post-import checks
 
-*(You would typically add installation instructions here. For example:)*
+- In app Settings: add your OpenAI API key.
+- Keep model as `gpt-4o-mini` initially.
+- Tap **Save Settings**.
+- Use text chat or press 🎙 for voice input.
 
-1.  Upload the script files to your web server.
-2.  Create a MySQL database and user.
-3.  Import the provided SQL database file.
-4.  Edit the configuration file (`config.php` or similar) with your database credentials and website settings.
-5.  Follow any additional on-screen instructions.
+## Notes
 
-## Support
+- ElevenLabs/Claude fields are wired in settings storage for next phases.
+- Accessibility automation, WhatsApp control, wake-word, and local memory DB are intentionally staged for later phases.
+- If Gradle wrapper regeneration is requested by your local setup, run: `gradle wrapper --gradle-version 8.6`.
 
-For support and inquiries, please contact:
+## Next recommended tasks
 
-* **Website:** [Your Support Website/Link]
-* **Email:** [Your Support Email Address]
-
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
----
-
-**Note:**
-
-* Replace the bracketed placeholders (e.g., `[https://skyrhrgts.com/]`) with your actual information.
-* Consider adding a screenshot or two of the script's frontend and backend to visually showcase its features.
-* If you have a demo link available, include it for potential users to try out the script.
-* Make sure your installation instructions are clear and comprehensive.
-
-This structured format will make your repository much more informative and appealing to potential users. Good luck!
+1. Add encrypted key storage using Android Keystore.
+2. Implement SQLite memory schema + retrieval.
+3. Add ElevenLabs TTS client and playback pipeline.
+4. Add runtime permission workflow screen.
+5. Add notification and accessibility services.
